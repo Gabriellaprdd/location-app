@@ -1,0 +1,90 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/locationListFragment">
+
+    <!-- Location List Fragment -->
+    <fragment
+        android:id="@+id/locationListFragment"
+        android:name="com.example.locationapp.ui.LocationListFragment"
+        android:label="fragment_location_list"
+        tools:layout="@layout/fragment_location_list">
+
+        <action
+            android:id="@+id/action_locationListFragment_to_addEditLocationFragment"
+            app:destination="@id/addEditLocationFragment" />
+        <action
+            android:id="@+id/action_locationListFragment_to_locationDetailFragment"
+            app:destination="@id/locationDetailFragment" />
+        <action
+            android:id="@+id/action_locationListFragment_to_reviewAnalysis"
+            app:destination="@id/reviewAnalysis" />
+        <action
+            android:id="@+id/action_locationListFragment_to_visitedLocationsFragment"
+            app:destination="@id/visitedLocationsFragment" />
+    </fragment>
+
+    <!-- Add/Edit Location Fragment -->
+    <fragment
+        android:id="@+id/addEditLocationFragment"
+        android:name="com.example.locationapp.ui.AddEditLocationFragment"
+        android:label="Add or Edit Location"
+        tools:layout="@layout/fragment_add_edit_location">
+
+        <argument
+            android:name="location"
+            app:argType="com.example.locationapp.Location"
+            app:nullable="true" />
+    </fragment>
+
+    <!-- Location Detail Fragment -->
+    <fragment
+        android:id="@+id/locationDetailFragment"
+        android:name="com.example.locationapp.ui.LocationDetailFragment"
+        android:label="fragment_location_detail"
+        tools:layout="@layout/fragment_location_detail">
+
+        <argument
+            android:name="location"
+            app:argType="com.example.locationapp.Location"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_locationDetailFragment_to_addEditLocationFragment"
+            app:destination="@id/addEditLocationFragment" />
+        <action
+            android:id="@+id/action_locationDetailFragment_to_addReviewFragment"
+            app:destination="@id/addReviewFragment" />
+    </fragment>
+
+    <!-- Visited Locations Fragment -->
+    <fragment
+        android:id="@+id/visitedLocationsFragment"
+        android:name="com.example.locationapp.ui.VisitedLocationsFragment"
+        android:label="Visited Locations"
+        tools:layout="@layout/fragment_visited_locations">
+
+        <action
+            android:id="@+id/action_visitedLocationsFragment_to_locationDetailFragment"
+            app:destination="@id/locationDetailFragment" />
+    </fragment>
+
+    <!-- Add Review Fragment -->
+    <fragment
+        android:id="@+id/addReviewFragment"
+        android:name="com.example.locationapp.ui.AddReviewFragment"
+        android:label="Add Review"
+        tools:layout="@layout/fragment_add_review">
+
+        <argument
+            android:name="locationId"
+            app:argType="integer" />
+    </fragment>
+
+    <!-- Review Analysis Fragment -->
+    <fragment
+        android:id="@+id/reviewAnalysis"
+        android:name="com.example.locationapp.ui.ReviewAnalysisFragment"
+        android:label="Review Analysis"
+        tools:layout="@layout/fragment_review_analysis" />
+</navigation>

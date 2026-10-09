@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Drawable shape: a light gray rounded rectangle with border -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#EEEEEE" />
+    <stroke
+        android:width="2dp"
+        android:color="#CCCCCC" />
+    <corners android:radius="8dp" />
+</shape>

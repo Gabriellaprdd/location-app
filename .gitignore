@@ -1,0 +1,64 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Built application files & caches
+*.apk
+*.ap_
+*.aab
+*.dex
+
+# Java class files
+*.class
+
+# Generated build files & Room / ViewBinding generated code
+bin/
+gen/
+out/
+build/
+app/build/
+.gradle/
+
+# Local configuration file (SDK location, etc.) - NEVER COMMIT THIS
+local.properties
+
+# Android Studio & IntelliJ project files
+*.iml
+.idea/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Keystores & signing keys - NEVER COMMIT SIGNING KEYS
+*.jks
+*.keystore
+
+# External native build output
+.externalNativeBuild
+.cxx/
+
+# Profiler & captures
+captures/
+*.hprof
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
